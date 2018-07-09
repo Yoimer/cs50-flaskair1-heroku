@@ -17,7 +17,8 @@ databasename : c50example
 port: 5432 (default port)
 '''
 
-engine = create_engine("postgresql://cs50:12345@localhost:5432/cs50example")
+#engine = create_engine("postgresql://cs50:12345@localhost:5432/cs50example")
+engine = create_engine("postgres://tjoqdlzgerwasq:627eda56fa7d598ec51f69a150488ed6b825f85681af61b0316a60427e4ced57@ec2-54-227-243-210.compute-1.amazonaws.com:5432/d4o3pdf3cjlv6c")
 db = scoped_session(sessionmaker(bind=engine))
 
 @app.route("/")
